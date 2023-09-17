@@ -1,0 +1,93 @@
+:root {font-size: 16px; box-sizing: border-box;}
+*, *::after, *::before {margin: 0; padding: 0; box-sizing: inherit;}
+
+body
+{
+    background: linear-gradient(to left bottom, #eeccff, #e6f9ff) no-repeat fixed center;
+    background-size: cover;
+    display: flex; align-items: center; justify-content: center; height: 100vh;
+}
+.card--container
+{
+    display: flex; gap: 2em;
+}
+.card {
+    width: 20em; padding: 1em;
+    transform: perspective(500px) rotateY(180deg) scale(0.7); 
+    transition: all 250ms ease;
+    box-shadow: 10px 10px 5px black;
+}
+.card--light
+{
+    background-color: white;
+}
+.card--dark
+{
+    background-color: black;
+}
+img
+{
+    width: 100%;
+}
+.title
+{
+    display: block;
+    font-size: 1.5em; font-weight: bold; margin: 0.5em 0;
+}
+.title--dark 
+{
+    color: white;
+}
+.description--light
+{
+    color: black;
+}
+.description--dark
+{
+    color: white;
+}
+
+.card:hover 
+{
+    transform: rotateY(0) scale(1);
+    box-shadow: -50px 50px 15px gray;
+}
+
+
+
+
+
+@media(max-width:500px)
+{
+
+body
+{
+    width: 100%;
+}
+.card
+{
+    width: 13em;
+    height: 25em;
+    padding: 0.8em;
+    transform: perspective(500px) rotateY(180deg) scale(0.6); 
+    transition: all 250ms ease;
+    box-shadow: 10px 10px 5px black;
+}
+.title
+{
+     font-size: 15px;
+}
+.description
+{
+     font-size: 10px;
+}
+.card:hover 
+{
+    transform: rotateY(0) scale(0.8);
+}
+.card--container
+{
+    display: flex; gap: 0;
+}
+    
+}
